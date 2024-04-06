@@ -1,3 +1,43 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "react", "prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "destructuredArrayIgnorePattern": "^_",
+        "ignoreRestSiblings": true,
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "[iI]gnored"
+      }
+    ],
+    "no-underscore-dangle": 0,
+    "react/prop-types": 0,
+    "linebreak-style": 0,
+    "max-len": ["error", 150],
+    "react/jsx-props-no-spreading": 0,
+    "default-param-last": 0,
+    "no-bitwise": 0,
+    "import/prefer-default-export": 0,
+    "no-param-reassign": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-cycle": 0,
+    "no-loop-func": 0
+  }
 }
